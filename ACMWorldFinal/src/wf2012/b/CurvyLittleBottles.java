@@ -1,13 +1,16 @@
 package wf2012.b;
 
 import static java.lang.Math.PI;
+import static java.lang.Math.pow;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CurvyLittleBottles {
 	
-	private static Map<Integer, Double> factorialChache = new HashMap<Integer, Double>();
+	private static Map<Integer, Double> factorialChache = new HashMap<Integer, Double>(); 
 	
 	public static double combination(int n, int m){
 		if(m == 0) return 1;
@@ -26,7 +29,17 @@ public class CurvyLittleBottles {
 		return result;
 	}
 	
+	private static List<Double> getEmptyCoefficients(int power){
+		List<Double> coefficients = new ArrayList<Double>();
+		for(int i = 0; i < power; i++){
+			coefficients.add(0.0);
+		}
+		return coefficients;
+	}
+	
+	
+	
 	public static void main(String[] args){
-		System.out.println(combination(2, 1));
+		
 	}
 }
