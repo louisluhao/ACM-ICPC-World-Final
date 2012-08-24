@@ -30,16 +30,21 @@ public class PolyTerm {
 	}
 
 	public PolyTerm multiple(PolyTerm other) {
-		return new PolyTerm(this.coefficient * other.coefficient,
-				this.exponent + other.exponent);
+		return new PolyTerm(this.coefficient * other.coefficient, this.exponent
+				+ other.exponent);
 	}
 
 	public double getValue(double x) {
 		return this.coefficient * pow(x, exponent);
 	}
-	
-	public static boolean isSameExponent(PolyTerm a, PolyTerm b){
+
+	public static boolean isSameExponent(PolyTerm a, PolyTerm b) {
 		return a.exponent == b.exponent;
+	}
+
+	public PolyTerm Integral() {
+		return new PolyTerm(this.coefficient / (this.exponent + 1),
+				exponent + 1);
 	}
 
 	@Override

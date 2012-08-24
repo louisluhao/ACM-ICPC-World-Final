@@ -65,6 +65,13 @@ public class PolyTermlTest {
 		assertEquals(null, b.sub(a));
 	}
 	
+	@Test
+	public void testPolyIntegral() {
+		PolyTerm a = new PolyTerm(2, 1);
+		PolyTerm ans = new PolyTerm(1, 2);
+		assertEquals(ans, a.Integral());
+	}
+	
 	
 
 }
